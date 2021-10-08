@@ -67,7 +67,7 @@ def outprintf(httplist=[]):
 
 
 def domain():
-    jss = jspath("./shouxuanfu")  # sys.argv[1] "./shouxuanfu"
+    jss = jspath("./wxapkg")  # sys.argv[1] "./wxapkg"
     search_data = rekeystring(jss)
     for key, value in relist.items():
         outprintf(search_data[key])
