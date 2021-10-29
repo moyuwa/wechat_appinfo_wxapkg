@@ -55,10 +55,9 @@ def outprintf(httplist=[]):
     #     for http in httplist:
     #         print(str(http).strip().rstrip())
     #         pass
-    print("===" * 10)
     for http1 in httplist:
         for http2 in http1:
-            if isinstance(http2,tuple):
+            if isinstance(http2, tuple):
                 for s1 in http2:
                     print(str(s1).strip("\"").rstrip("\""))
             else:
@@ -67,9 +66,10 @@ def outprintf(httplist=[]):
 
 
 def domain():
-    jss = jspath("./wxapkg")  # sys.argv[1] "./wxapkg"
+    jss = jspath(sys.argv[1])  # sys.argv[1] "./wxapkg"
     search_data = rekeystring(jss)
     for key, value in relist.items():
+        print("===" * 5, key, "===" * 5)
         outprintf(search_data[key])
 
 
