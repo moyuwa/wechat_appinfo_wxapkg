@@ -17,3 +17,5 @@ python3
 
 内部加入了【findsomething】这个项目的规则，可以匹配手机号、身份证、jwt、url、ip、domain、apikey、user|password等字符串
 
+同时加入了常见的几个apikey匹配规则，大家可修改源码自定义
+
