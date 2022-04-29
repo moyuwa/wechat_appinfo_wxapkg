@@ -11,6 +11,7 @@ relist = {
     "userpwdlist": "user.*?=\".*?\"", "userpwdlist": "passw.*?=\".*?\"",
     "accesskey": "access.*?key.*?=", "accesskey": "access.*?key.*?:",
     "tokenkey": "token.*?key.*?=", "tokenkey": "token.*?key.*?:",
+    "apipath":"\"[/|]api.*?/.*?[/|]\"","secret":"secret[id|key].*?=.*?\".*?\"",
     # ======== findsomething 规则 ========
     "sfz": "['\"]((\d{8}(0\d|10|11|12)([0-2]\d|30|31)\d{3}$)|(\d{6}(18|19|20)\d{2}(0[1-9]|10|11|12)([0-2]\d|30|31)\d{3}(\d|X|x)))['\"]",
     "mobile": "['\"](1(3([0-35-9]\d|4[1-8])|4[14-9]\d|5([\d]\d|7[1-79])|66\d|7[2-35-8]\d|8\d{2}|9[89]\d)\d{7})['\"]",
