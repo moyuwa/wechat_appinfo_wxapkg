@@ -7,7 +7,7 @@ import os, sys, re
 
 relist = {
     # ======== 自定义 规则 ========
-    "httplist": "\"http.://.*?\"", "urllist": "\".*?[^http]/.*?\\?.*?=\"", "apikeylist": "api.*?key.*?=",
+    "httplist": "\"http.://.*?\"", "urllist": "\".*?[^http]/.*?\\?.*?=\"", "apikeylist": "api.*?key.*?=","apikeylist": "api.*?key.*?:",
     "userpwdlist": "user.*?=\".*?\"", "userpwdlist": "passw.*?=\".*?\"",
     "accesskey": "access.*?key.*?=", "accesskey": "access.*?key.*?:",
     "tokenkey": "token.*?key.*?=", "tokenkey": "token.*?key.*?:",
@@ -60,7 +60,7 @@ def outprintf(httplist=[]):
     #         pass
     for http1 in httplist:
         for http2 in http1:
-            if isinstance(http2, tuple):
+            if isinstance(http2,tuple):
                 for s1 in http2:
                     print(str(s1).strip("\"").rstrip("\""))
             else:
@@ -72,9 +72,8 @@ def domain():
     jss = jspath(sys.argv[1])  # sys.argv[1] "./wxapkg"
     search_data = rekeystring(jss)
     for key, value in relist.items():
-        print("===" * 5, key, "===" * 5)
-        outprintf(search_data[key])
-
+        print("===" * 5,key,"===" * 5)
+	    outprintf(search_data[key])
 
 if __name__ == "__main__":
     print("""

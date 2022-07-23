@@ -36,7 +36,7 @@ if __name__ == '__main__':
     elif platform.system().lower() == 'linux':
         pass
     else:
-        print "Unable to run the system,please open in windows、linux"
+        print("Unable to run the system,please open in windows、linux") 
         exit(-1)
     reload(sys)
     sys.setdefaultencoding('utf-8')  # 解决编码问题
@@ -49,7 +49,7 @@ if __name__ == '__main__':
         try:
             Get_Domain(X_APP_ID, X_WECHAT_KEY, X_WECHAT_UIN)
         except:
-            print X_APP_ID + "的信息获取失败，请检查！"
+            print(X_APP_ID + "的信息获取失败，请检查！") 
     Domain_list = list(set(Domain_list))  # list数组去重
     Domain_list = filter(None, Domain_list)  # list数组去空
-    print "收集到的域名: " + str(Domain_list)
+    print("收集到的域名: " + str(Domain_list)) 

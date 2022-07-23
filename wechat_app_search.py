@@ -31,7 +31,7 @@ if __name__ == '__main__':
     elif platform.system().lower() == 'linux':
         pass
     else:
-        print "Unable to run the system,please open in windows、linux"
+        print("Unable to run the system,please open in windows、linux") 
         exit(-1)
     reload(sys)
     sys.setdefaultencoding('utf-8')  # 解决编码问题
@@ -42,7 +42,7 @@ if __name__ == '__main__':
     App_Name_List = []
     try:
         Get_Apps(query, number, cookie)
-        print "返回的小程序名: " + ",".join(App_Name_List)
-        print "返回的小程序ID: " + ",".join(App_Id_List)
+        print("返回的小程序名: " + ",".join(App_Name_List)) 
+        print("返回的小程序ID: " + ",".join(App_Id_List)) 
     except:
-        print "信息获取失败，请检查网络或cookie是否正常！"
+        print("信息获取失败，请检查网络或cookie是否正常！") 
