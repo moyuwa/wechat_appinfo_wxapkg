@@ -92,7 +92,7 @@ def rekeystring(jss=[]):
 
 # 信息输出
 def outprintf(httplist=[]):
-    with open("httplist.txt", "a",encoding="utf-8") as f:
+    with open("infoget1.txt", "a",encoding="utf-8") as f:
         for http1 in httplist:
             for http2 in http1:
                 if isinstance(http2, tuple):
